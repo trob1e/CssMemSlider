@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 0.85rem;
+  }
+  
+  .slider {
+    max-width: 45rem;
+    margin: 0 1em;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(52, 57, 61, 0.3);
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    width: 700%;
+    margin-top: -1rem;
+  }
+  
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0.8rem 0;
+    height: 4rem;
+    gap: 1rem;
+  }
+  
+  
+  .description {
+    flex: 1 1 100%;
+    height: 24rem;
+    overflow: hidden;
+  }
+  @media (max-width: 26.56rem) {
+    .bottom {
+      flex-direction: column-reverse;
+      align-items: center;
+      height: 5rem;
+    }
+  }
+  @media (max-width: 26.56rem) {
+    .description {
+      align-self: flex-start;
+    }
+  }
+  
+  .text {
+    height: 4rem;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0.2rem;
+    margin-top: -0.3rem;
+  }
+  
+  .button {
+    width: 1em;
+    height: 1em;
+    border-radius: 1rem;
+    border: 0.45rem solid #fff;
+    background: rgba(252, 125, 41, 0.3);
+    transition: 0.6s;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 37.5rem) {
+    .buttons {
+      margin-top: -0.2rem;
+    }
+    .button {
+      width: 0.8em;
+      height: 0.8em;
+      border-radius: 1rem;
+      border: 0.25rem solid #fff;
+      background: rgba(255, 185, 0, 0.3);
+      transition: 0.6s;
+      cursor: pointer;
+    }
+  }
+  
+  .button:hover {
+    transform: scale(1.2);
+    background: #ffb200;
+  }
+  
+  .slide {
+    width: 14.286%;
+    transition: 0.6s;
+  }
+  
+  .slide img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  input[type="radio"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  #one:checked ~ .bottom .description .first-text {
+    margin-top: 0;
+    transition: 0.6s;
+  }
+  
+  #two:checked ~ .bottom .description .first-text {
+    margin-top: -4rem;
+    transition: 0.6s;
+  }
+  
+  #three:checked ~ .bottom .description .first-text {
+    margin-top: -8rem;
+    transition: 0.6s;
+  }
+  
+  #four:checked ~ .bottom .description .first-text {
+    margin-top: -12rem;
+    transition: 0.6s;
+  }
+  
+  #five:checked ~ .bottom .description .first-text {
+    margin-top: -16rem;
+    transition: 0.6s;
+  }
+  
+  #six:checked ~ .bottom .description .first-text {
+    margin-top: -20rem;
+    transition: 0.6s;
+  }
+  
+  #seven:checked ~ .bottom .description .first-text {
+    margin-top: -24rem;
+    transition: 0.6s;
+  }
+  
+  #one:checked ~ .slides .first-slide {
+    margin-left: 0;
+  }
+  
+  #two:checked ~ .slides .first-slide {
+    margin-left: -14.285%;
+  }
+  
+  #three:checked ~ .slides .first-slide {
+    margin-left: -28.57%;
+  }
+  
+  #four:checked ~ .slides .first-slide {
+    margin-left: -42.855%;
+  }
+  
+  #five:checked ~ .slides .first-slide {
+    margin-left: -57.14%;
+  }
+  
+  #six:checked ~ .slides .first-slide {
+    margin-left: -71.425%;
+  }
+  
+  #seven:checked ~ .slides .first-slide {
+    margin-left: -85.71%;
+  }
+  #one:checked ~ .bottom .buttons .button:nth-child(1),
+  #two:checked ~ .bottom .buttons .button:nth-child(2),
+  #three:checked ~ .bottom .buttons .button:nth-child(3),
+  #four:checked ~ .bottom .buttons .button:nth-child(4),
+  #five:checked ~ .bottom .buttons .button:nth-child(5),
+  #six:checked ~ .bottom .buttons .button:nth-child(6),
+  #seven:checked ~ .bottom .buttons .button:nth-child(7) {
+    background: #ffb200;
+    width: 2rem;
+    border-radius: 1rem;
+  }
